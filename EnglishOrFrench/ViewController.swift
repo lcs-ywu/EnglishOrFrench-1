@@ -46,10 +46,12 @@ class ViewController: UIViewController {
             return
         }
         
+        // Check each character for either s or t
         for singleCharacter in phraseInput{
             
             switch singleCharacter {
             case "s","S":
+                // Add 1 to variable
                 sCount += 1
             case "t","T":
                 tCount += 1
@@ -58,6 +60,7 @@ class ViewController: UIViewController {
             }
         }
         
+        // Compare variables, change label depending on values
         if sCount == tCount || sCount >= tCount {
             outputLabel.text = "This looks like French"
         } else if sCount <= tCount{
